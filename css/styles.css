@@ -510,16 +510,29 @@ textarea {
   background-color: #31d0aa;
 }
 
+.footer-form {
+  margin-left: 80px;
+}
+
 .sub-form {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin-left: 80px;
   gap: 24px;
 }
 
-.form-label {
+.foot-form-text {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 16px;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.form-label {
   display: flex;
   flex-direction: column;
   color: #ffffff;
@@ -530,17 +543,16 @@ textarea {
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.04em;
-  line-height: 1.5;
-  background-color: #2e2f42;
+  line-height: 2;
+  background-color: transparent;
   color: #ffffff;
-  box-shadow: 0px 4px 4px 0px #00000026;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   border: 1px solid #ffffff;
   border-radius: 4px;
-  min-width: 264px;
+  width: 264px;
   height: 40px;
   justify-content: center;
   padding-left: 16px;
-  margin-top: 16px;
 }
 
 .sub-inp::placeholder {
@@ -548,6 +560,11 @@ textarea {
 }
 
 .sub-btn {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   display: flex;
   font-weight: 500;
   color: #ffffff;
@@ -555,16 +572,19 @@ textarea {
   letter-spacing: 0.04em;
   cursor: pointer;
   line-height: 1.5;
-  min-width: 166px;
+  min-width: 165px;
   height: 40px;
   border: none;
   border-radius: 4px;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding-bottom: 0;
+}
+
+.sub-btn .icon {
+  margin-left: 16px;
 }
 
 .sub-btn:hover,
@@ -599,7 +619,7 @@ textarea {
   position: absolute;
   background-color: #fcfcfc;
   border-radius: 4px;
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
   box-shadow: 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001f,
     0px 2px 1px 0px #00000033;
   width: 408px;
@@ -612,27 +632,34 @@ textarea {
 }
 
 .close-btn {
+  position: absolute;
   width: 24px;
   height: 24px;
   background-color: #e7e9fc;
   border: 1px solid #0000001a;
   border-radius: 50%;
   display: flex;
-  margin: 0 0 24px auto;
+  cursor: pointer;
+  top: 24px;
+  right: 24px;
   justify-content: center;
   align-items: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn:hover,
 .close-btn:focus {
   background-color: #404bbf;
+  border: none;
+}
+
+.close-btn .icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn:hover .icon,
 .close-btn:focus .icon {
-  background-color: #404bbf;
   fill: #ffffff;
 }
 
@@ -643,6 +670,8 @@ textarea {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
+  color: #2e2f42;
+  margin-bottom: 16px;
 }
 
 .modal-form {
@@ -650,40 +679,50 @@ textarea {
   flex-direction: column;
   justify-content: center;
   gap: 8px;
-  margin-top: 16px;
+}
+
+.mod-form-cont {
+  margin-bottom: 8px;
 }
 
 .modal .form-label {
+  display: block;
   font-family: inherit;
   font-size: 12px;
   font-weight: 400;
-  line-height: 14px;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 4px;
+}
+
+.mod-inp-cont {
   position: relative;
 }
 
 .modal-inp {
-  min-width: 360px;
+  width: 100%;
   height: 40px;
-  border: 1px solid #2e2f4266;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  outline: transparent;
   border-radius: 4px;
   align-items: center;
   padding-left: 38px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-icon {
   position: absolute;
   z-index: 999;
   left: 16px;
-  top: 21px;
+  top: 50%;
+  transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-label:focus-within .modal-inp {
-  border: 1px solid #4d5ae5;
+  border-color: #4d5ae5;
 }
 
 .form-label:focus-within .form-icon {
@@ -691,13 +730,19 @@ textarea {
 }
 
 .modal-comment {
-  min-width: 360px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  outline: transparent;
+  resize: none;
+  width: 100%;
   height: 120px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  padding-top: 8px;
-  padding-left: 16px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 8px 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-comment::placeholder {
@@ -705,7 +750,7 @@ textarea {
 }
 
 .form-label-com:focus-within .modal-comment {
-  border: 1px solid #4d5ae5;
+  border-color: #4d5ae5;
 }
 
 .modal-priv {
@@ -717,6 +762,11 @@ textarea {
 .modal .priv-label {
   display: flex;
   flex-direction: row;
+  line-height: 1.17;
+}
+
+.checkbox-cont {
+  margin-bottom: 24px;
 }
 
 .visually-hidden {
@@ -733,19 +783,21 @@ textarea {
 }
 
 .priv-span {
+  display: inline-flex;
   position: relative;
   width: 16px;
   height: 16px;
   border: 1px solid #2e2f4266;
   border-radius: 2px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
   margin-right: 8px;
   background-color: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-icon {
