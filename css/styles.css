@@ -239,7 +239,7 @@ textarea {
   justify-content: center;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -648,8 +648,8 @@ textarea {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-btn:focus,
-.close-btn:hover {
+.modal .close-btn:focus,
+.modal .close-btn:hover {
   background-color: #404bbf;
   border: none;
 }
@@ -658,8 +658,8 @@ textarea {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-btn:hover .icon,
-.close-btn:focus .icon {
+.modal .close-btn:hover .icon,
+.modal .close-btn:focus .icon {
   fill: #ffffff;
 }
 
