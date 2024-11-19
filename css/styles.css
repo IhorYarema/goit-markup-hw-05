@@ -721,11 +721,11 @@ textarea {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-label:focus-within .modal-inp {
+.mod-form-cont:focus-within .modal-inp {
   border-color: #4d5ae5;
 }
 
-.form-label:focus-within .form-icon {
+.mod-form-cont:focus-within .form-icon {
   fill: #4d5ae5;
 }
 
@@ -749,7 +749,7 @@ textarea {
   color: #2e2f4266;
 }
 
-.form-label-com:focus-within .modal-comment {
+.form-label:focus-within .modal-comment {
   border-color: #4d5ae5;
 }
 
