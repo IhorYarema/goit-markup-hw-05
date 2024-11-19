@@ -753,6 +753,10 @@ textarea {
   color: #2e2f4266;
 }
 
+.modal-comment:focus {
+  border-color: #4d5ae5;
+}
+
 .form-label:focus-within .modal-comment {
   border-color: #4d5ae5;
 }
@@ -786,10 +790,7 @@ textarea {
   overflow: hidden;
 }
 
-.priv-label {
-}
-
-.priv-span {
+.priv-label .priv-span {
   position: relative;
   width: 16px;
   height: 16px;
@@ -815,7 +816,7 @@ textarea {
   transform: translateY(-50%);
 }
 
-input[type="checkbox"]:checked + .priv-label .priv-span {
+input[type="checkbox"]:checked + .form-label .priv-span {
   border: none;
   background-color: #404bbf;
   fill: #f4f4fd;
