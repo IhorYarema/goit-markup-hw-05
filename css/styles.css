@@ -239,7 +239,7 @@ textarea {
   justify-content: center;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -757,7 +757,7 @@ textarea {
   border-color: #4d5ae5;
 }
 
-.form-label:focus-within .modal-comment {
+.priv-label:focus-within .modal-comment {
   border-color: #4d5ae5;
 }
 
@@ -768,9 +768,14 @@ textarea {
 }
 
 .modal .priv-label {
-  display: flex;
   flex-direction: row;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
   line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-bottom: 4px;
 }
 
 .checkbox-cont {
@@ -816,7 +821,7 @@ textarea {
   transform: translateY(-50%);
 }
 
-input[type="checkbox"]:checked + .form-label .priv-span {
+input[type="checkbox"]:checked + .priv-label .priv-span {
   border: none;
   background-color: #404bbf;
   fill: #f4f4fd;
