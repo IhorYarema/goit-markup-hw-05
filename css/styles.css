@@ -678,7 +678,6 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 8px;
 }
 
 .mod-form-cont {
